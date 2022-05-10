@@ -1,0 +1,52 @@
+--------------------------------------------------------------------------------
+frug - BUGS
+--------------------------------------------------------------------------------
+
+001 07/11/2008	frug/player.py: Mplayer software volume is buggy
+		
+    Holding down +/- will make the software volume stuck and the user can no
+    longer adjust it.  The amixer volume control does not suffer from this, but
+    it modifies the system wide volume, which is not desirable.
+
+--------------------------------------------------------------------------------
+
+002 07/11/2008	frug/widget.py:	BrowseTab can't handle missing directories
+
+    If a directory disappears, and the user tries to change from it, program
+    will crash.
+
+--------------------------------------------------------------------------------
+
+003 07/14/2008	frug.py: playlist FileIndex gets messed up after win resizing	
+    
+    Actual bug is that FileIndex needs to be set to ScrollIndex + SelectIndex
+    when passed to play_file.  Has nothing to do with window resizing, just
+    when the user selects a file at the end of the playlist (ie. user skips
+    ahead to a song further down in the playlist, and the FileIndex isn't
+    updated properly).
+
+    [Fixed: 07/14/2008 Peter Bui <peter.j.bui@gmail.com>]
+
+--------------------------------------------------------------------------------
+
+004 07/24/2008	frug.py: status text doesn't show all messages
+
+    Because we always display the play status in the status text, messages such
+    as 'Added: ' are lost (ie. screen flashes very quickly).  One possible fix
+    is to queue status messages or to introduce some sort of timer or delay
+    before displaying the next message.  This would involve creating a new
+    StatusText widget.
+
+--------------------------------------------------------------------------------
+
+005 08/01/2008	frug/widget.py: deleting from playlist leads to wrong file_index
+
+    If you delete a song from the playlist that is above the current song, the
+    embolden playlist song is incorrect. 
+
+    It appears that the whole delete_file system is wrong because select_index
+    != file_index.  This whole section will need fixing.
+
+    [Fixed: 08/01/2008 Peter Bui <peter.j.bui@gmail.com>]
+
+--------------------------------------------------------------------------------

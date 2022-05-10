@@ -1,0 +1,27 @@
+--------------------------------------------------------------------------------
+frug - HACKING
+--------------------------------------------------------------------------------
+
+Mercurial Repository
+--------------------
+
+    Use local branches for long-term development lines such as:
+
+    *	default: current/head development branch with latest features
+    *	frug-x.y.z: for maintainance release lines
+    *	frug-feature: for large feature/big changes branch
+    *	library-x.y.z: for integrating with new versions of library
+
+    Use tags to denote releases and milestones:
+    *	frug-x.y.z: for specific version release (must be stable and
+	suitable for public pulling)
+
+    For new development, bug fixes, use MQ extension to manage patches and then
+    commit patches back into the appropriate branch.  Work should be done in
+    the maintenance or feature branch and then tagged when stable.  Changesets
+    can be slurped between branches or patches can be imported manually to
+    synchronize different branches.
+
+--------------------------------------------------------------------------------
+vim: sw=4 sts=4 ts=8
+--------------------------------------------------------------------------------

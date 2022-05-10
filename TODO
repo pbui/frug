@@ -1,0 +1,31 @@
+--------------------------------------------------------------------------------
+frug - TODO
+--------------------------------------------------------------------------------
+
+[ ] Required task	( ) Optional task
+
+  : Incomplete
+ ~: Partially completed
+ x: Completed
+
+--------------------------------------------------------------------------------
+
+0.4.0
+-----
+
+[x] Move songs up/down playlist
+[x] Shuffle playlist
+[ ] Command line arguments (ie. initial directory, color settings)
+[ ] Center current song in playlist option
+
+--------------------------------------------------------------------------------
+
+0.5.0
+-----
+
+[ ] Configuration file (integrate API from carapace)
+[ ] Documentation (README, HACKING, etc.)
+
+--------------------------------------------------------------------------------
+vim: sts=4 sw=4 ts=8 ft=TODO
+--------------------------------------------------------------------------------
